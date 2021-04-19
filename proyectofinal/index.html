@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="theme-color" content="#212121">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Mono|Roboto:300,400" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Trivia Musical</title>
+  </head>
+  <body class="grey darken-4 center-align">
+    <div class="container white-text">
+      <h1 class="title scale-transition" id="title">Trivia Musical</h1>
+      <p class="pregunta scale-transition" id="pregunta">Haga click en <span class="orange-text">jugar</span> para iniciar el juego. Debe responder al menos 6/10 preguntas correctamente para ganar</p>
+      <form action="#" id="form" name="questionsForm" class="hide scale-transition scale-out">
+        <div class="row scale-transition" id="respuestas">
+          <div class="col s12 m6">
+            <div class="contenedor-respuesta left">
+              <label class="inputs">
+                <input name="group1" value="0" type="radio" />
+                <span class="respuestas">Respuesta</span>
+              </label>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="contenedor-respuesta right">
+              <label class="inputs">
+                <input name="group1" value="1"type="radio" />
+                <span class="respuestas right-button">Respuesta</span>
+              </label>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="contenedor-respuesta left">
+              <label class="inputs">
+                <input name="group1" value="2"type="radio" />
+                <span class="respuestas">Respuesta</span>
+              </label>
+            </div>
+          </div>
+          <div class="col s12 m6">
+            <div class="contenedor-respuesta right">
+              <label class="inputs">
+                <input name="group1" value="3"type="radio" />
+                <span class="respuestas right-button">Respuesta</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <a class="waves-effect btn-large orange darken-1 hoverable center" onclick="validateAnswer()">Siguiente</a>
+        </div>
+      </form>
+      <a class="waves-effect btn-large orange darken-1 hoverable center scale-transition" id="startBtn" onclick="startGame()">Jugar</a>
+      <div class="finalText scale-transition scale-out hide" id="finalDiv">
+        <p class="pregunta">
+          Felicitaciones a logrado <span class="orange-text" id="corrects">3</span>/10 preguntas
+        </p>
+        <a class="btn-large waves-effect orange darken-1 hoverable center scale-transition" onclick="restartGame()">Reiniciar</a>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="app.js">
+    </script>
+  </body>
+</html>
